@@ -1,0 +1,42 @@
+replicaCount: 1
+image:
+  repository: vourteen14/vulnerable-laravel-devsecops-pipeline
+  pullPolicy: Always
+  tag: "v1.0.9"
+secretName: secret-vulnerable-laravel-devsecops-pipeline-staging
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+serviceAccount:
+  create: true
+  automount: true
+  annotations: {}
+  name: ""
+podAnnotations: {}
+podLabels: {}
+service:
+  type: ClusterIP
+  port: 80
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations: {}
+  hosts:
+    - host: dvs.angga-sr.xyz
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+resources: {}
+livenessProbe:
+  httpGet:
+    path: /
+    port: http
+readinessProbe:
+  httpGet:
+    path: /
+    port: http
+volumeMounts: []
+nodeSelector: {}
+tolerations: []
+affinity: {}
