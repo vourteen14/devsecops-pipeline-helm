@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  devsecops-pipeline-staging:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-02-19T14:47:58.289926752+07:00"
+    description: A Helm chart for Kubernetes
+    digest: c1b05418c520a46e06032946dd4c008b3f43a4bc8d169d137f83552949e9d1bb
+    name: devsecops-pipeline-staging
+    type: application
+    urls:
+    - https://vourteen14.github.io/devsecops-pipeline-helm/devsecops-pipeline-staging-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-02-19T14:47:58.287428442+07:00"
